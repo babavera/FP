@@ -42,12 +42,11 @@ public class MarvelTest {
         DigitalStorePage digitalStorePage = buyPage.clickOnBuyDigitalIssue();
         AppstorePage appstorePage = digitalStorePage.clickOnAppStore();
         Assertions.assertTrue(appstorePage.getTitle().contains("App"));
-        appstorePage.closeAppStorePage();
 
         GooglePlayPage googlePlayPage = digitalStorePage.clickOnGooglePlay();
         Assertions.assertTrue(googlePlayPage.getTitle().contains("Google"));
-        googlePlayPage.closeGooglePlayPage();
-        String windowHandler = driver.getWindowHandle();
+
+        //String windowHandler = driver.getWindowHandle();
 
         /*String pageTitle = driver.findElement(TITLE).getText();
         driver.switchTo().window(windowHandler);*/
