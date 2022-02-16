@@ -1,0 +1,10 @@
+apiTests\requests\CharactersGetRequest.class
+apiTests\requests\RootGetRequest.class
+UITests\E2ETests\DevelopMarvelTest.class
+apiTests\requests\ComicsGetRequest.class
+apiTests\stepDefs\GetComicsPositiveTestDef.class
+apiTests\stepDefs\GetCharactersPositiveTestDef.class
+apiTests\stepDefs\GetCharactersNegativeTest.class
+apiTests\TestRunner.class
+UITests\E2ETests\MarvelTest.class
+UITests\SmokeTests\SectionsTest.class
