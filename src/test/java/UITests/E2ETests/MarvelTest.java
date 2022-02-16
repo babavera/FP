@@ -29,7 +29,7 @@ public class MarvelTest {
 
     @AfterEach
     public void tearDown() {
-        driver.close();
+        driver.quit();
     }
 
     @Test
