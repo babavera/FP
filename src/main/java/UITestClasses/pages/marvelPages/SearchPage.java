@@ -4,8 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+
 
 public class SearchPage {
 
@@ -26,12 +25,10 @@ public class SearchPage {
         element.sendKeys(Keys.ENTER);
     }
     public void clickOnComicsChapter(){
-        new WebDriverWait(driver, 30)
-                .until(ExpectedConditions.elementToBeClickable(COMICS_CHAPTER)).click();
+        driver.findElement(COMICS_CHAPTER).click();
     }
     public BuyPage clickOnComics(){
-        new WebDriverWait(driver, 30)
-                .until(ExpectedConditions.elementToBeClickable(DEADPOOL_2019_10)).click();
+        driver.findElement(DEADPOOL_2019_10).click();
         return new BuyPage(driver);
     }
 }

@@ -32,7 +32,7 @@ public class DevelopMarvelTest {
     }
 
     @Test
-    public void testCatalogSection() throws InterruptedException {
+    public void testDeveloperMarvelComSite() throws InterruptedException {
         HomePageDev homePageDev = new HomePageDev(driver);
         LoginPage loginPage = homePageDev.clickOnSignIn();
         loginPage.doLogin();

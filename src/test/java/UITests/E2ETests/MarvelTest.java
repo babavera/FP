@@ -33,7 +33,7 @@ public class MarvelTest {
     }
 
     @Test
-    public void testCatalogSection() {
+    public void testMarvelComSite() {
         HomePage homePage = new HomePage(driver);
         SearchPage searchPage = homePage.clickOnElementSearch();;
         searchPage.sendKeyAndPressEnter();
