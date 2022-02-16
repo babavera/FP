@@ -43,6 +43,4 @@ public class SectionsTest {
               () -> Assertions.assertTrue(homePage.findeDeveloperPortal().isDisplayed())
       );
     }
-
-
 }
