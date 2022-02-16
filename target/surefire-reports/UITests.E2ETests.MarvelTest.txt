@@ -1,8 +1,0 @@
--------------------------------------------------------------------------------
-Test set: UITests.E2ETests.MarvelTest
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 47.911 s <<< FAILURE! - in UITests.E2ETests.MarvelTest
-UITests.E2ETests.MarvelTest.testCatalogSection  Time elapsed: 47.858 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
-	at UITests.E2ETests.MarvelTest.testCatalogSection(MarvelTest.java:44)
-
