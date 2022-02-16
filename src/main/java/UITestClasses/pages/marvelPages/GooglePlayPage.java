@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 
 public class GooglePlayPage extends HomePage{
 
-    private final static By TITLE = By.xpath("//title");
+    private final static By TITLE = By.xpath("//title[@id]");
 
     public GooglePlayPage (WebDriver driver) {
         super(driver);
@@ -16,6 +16,10 @@ public class GooglePlayPage extends HomePage{
 
     public void closeGooglePlayPage (){
         driver.close();
+    }
+
+    public String getUrl(){
+        return driver.getCurrentUrl();
     }
 
 }

@@ -19,4 +19,9 @@ public class HomePage {
                 .until(ExpectedConditions.elementToBeClickable(SEARCH_ICON)).click();
         return new SearchPage(driver);
     }
+    public void switchToWindow(int numberWindow) {
+        String handle = driver.getWindowHandles().toArray()[numberWindow]
+                .toString();
+        driver.switchTo().window(handle);
+    }
 }

@@ -13,8 +13,6 @@ public class SearchPage {
     private final static By INPUT_LINE = By.xpath("//input[@aria-controls='react-autowhatever-1']");
     private final static By DEADPOOL_2019_10 = By.xpath("//a[text()='Deadpool (2019) #10']");
     private final static String heroName = "Deadpool";
-    private static final By VIDEO_CHAPTER = By.xpath("");
-    private static final By CHARACTER_CHAPTER = By.xpath("");
 
     private final WebDriver driver;
 

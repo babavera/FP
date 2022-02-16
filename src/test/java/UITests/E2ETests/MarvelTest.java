@@ -41,15 +41,17 @@ public class MarvelTest {
         BuyPage buyPage = searchPage.clickOnComics();;
         DigitalStorePage digitalStorePage = buyPage.clickOnBuyDigitalIssue();
         AppstorePage appstorePage = digitalStorePage.clickOnAppStore();
-        Assertions.assertTrue(appstorePage.getTitle().contains("App"));
+        homePage.switchToWindow(1);
+        String appUrl = "https://apps.apple.com/us/app/marvel-comics/id350027738";
+        Assertions.assertEquals(appUrl,appstorePage.getUrl());
+        System.out.println();
 
+        appstorePage.switchToWindow(0);
         GooglePlayPage googlePlayPage = digitalStorePage.clickOnGooglePlay();
-        Assertions.assertTrue(googlePlayPage.getTitle().contains("Google"));
+        homePage.switchToWindow(2);
+        String googlePlayUrl = "https://play.google.com/store/apps/details?id=com.marvel.comics&hl=en_US";
+        Assertions.assertEquals(googlePlayUrl, googlePlayPage.getUrl());
 
-        //String windowHandler = driver.getWindowHandle();
-
-        /*String pageTitle = driver.findElement(TITLE).getText();
-        driver.switchTo().window(windowHandler);*/
 
 
     }

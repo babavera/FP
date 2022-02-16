@@ -16,12 +16,12 @@ public class DigitalStorePage extends HomePage{
 
     public AppstorePage clickOnAppStore(){
         new WebDriverWait(driver, 30)
-                .until(ExpectedConditions.elementToBeClickable(GOOGLE_PLAY)).click();
+                .until(ExpectedConditions.elementToBeClickable(APP_STORE)).click();
         return new AppstorePage(driver);
     }
     public GooglePlayPage clickOnGooglePlay(){
         new WebDriverWait(driver, 30)
-                .until(ExpectedConditions.elementToBeClickable(APP_STORE)).click();
+                .until(ExpectedConditions.elementToBeClickable(GOOGLE_PLAY)).click();
         return new GooglePlayPage(driver);
     }
 
