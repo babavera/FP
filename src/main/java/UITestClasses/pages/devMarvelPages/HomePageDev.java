@@ -15,9 +15,8 @@ public class HomePageDev {
     private final static By USER_NAME = By.xpath("//div[@class='user-menu__links'][span[contains(text(),'Serhey')]]");
     private final static By MY_DEVELOPER_PORTAL = By.xpath("//li[a[contains(text(),'My Developer Account')]]");
     private final static By GET_A_KEY = By.xpath("//a[@id='logout']");
-    private final static By LOG_OUT = By.xpath("//a[@id='logout']");
     private final static By HERE = By.xpath("//a[@href='https://developer.marvel.com/account']");
-
+    
     public final WebDriver driver;
 
     public HomePageDev(WebDriver driver) {
@@ -54,15 +53,9 @@ public class HomePageDev {
         if (driver.findElement(GET_A_KEY).isDisplayed()) {
             new WebDriverWait(driver, 30)
                     .until(ExpectedConditions.elementToBeClickable(GET_A_KEY)).click();
-            return new MyDeveloperPortalPage(driver);
         } else {
             driver.findElement(HERE).click();
-            return new MyDeveloperPortalPage(driver);
         }
-    }
-
-    public void clickOnLogOut() {
-        new WebDriverWait(driver, 30)
-                .until(ExpectedConditions.elementToBeClickable(LOG_OUT)).click();
+        return new MyDeveloperPortalPage(driver);
     }
 }

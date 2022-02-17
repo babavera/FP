@@ -27,7 +27,7 @@ public class SectionsTest {
 
     @AfterEach
     public void tearDown() {
-        driver.quit();
+        driver.close();
     }
 
 
