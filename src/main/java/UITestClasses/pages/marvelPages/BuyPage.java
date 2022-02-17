@@ -10,7 +10,7 @@ public class BuyPage extends HomePage
     private final static By BUY_DIGITAL_ISSUE = By.xpath("//a[@class='cta-btn cta-btn--outline cta-btn--red purchase-link']");
 
     public BuyPage(WebDriver driver) {
-        super(driver);;
+        super(driver);
     }
 
     public DigitalStorePage clickOnBuyDigitalIssue() {

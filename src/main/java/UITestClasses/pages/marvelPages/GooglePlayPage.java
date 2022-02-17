@@ -10,12 +10,9 @@ public class GooglePlayPage extends HomePage{
     public GooglePlayPage (WebDriver driver) {
         super(driver);
     }
+
     public String getTitle(){
         return driver.findElement(TITLE).getText();
-    }
-
-    public void closeGooglePlayPage (){
-        driver.close();
     }
 
     public String getUrl(){

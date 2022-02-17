@@ -35,10 +35,10 @@ public class MarvelTest {
     @Test
     public void testMarvelComSite() {
         HomePage homePage = new HomePage(driver);
-        SearchPage searchPage = homePage.clickOnElementSearch();;
+        SearchPage searchPage = homePage.clickOnElementSearch();
         searchPage.sendKeyAndPressEnter();
         searchPage.clickOnComicsChapter();
-        BuyPage buyPage = searchPage.clickOnComics();;
+        BuyPage buyPage = searchPage.clickOnComics();
         DigitalStorePage digitalStorePage = buyPage.clickOnBuyDigitalIssue();
         AppstorePage appstorePage = digitalStorePage.clickOnAppStore();
         homePage.switchToWindow(1);

@@ -1,8 +1,8 @@
 package UITests.E2ETests;
 
 import UITestClasses.pages.devMarvelPages.HomePageDev;
-import UITestClasses.pages.devMarvelPages.IDocumentationPage;
-import UITestClasses.pages.marvelPages.LoginPage;
+import UITestClasses.pages.devMarvelPages.LoginPage;
+import UITestClasses.pages.devMarvelPages.MyDeveloperPortalPage;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.WebDriver;
@@ -37,13 +37,9 @@ public class DevelopMarvelTest {
         LoginPage loginPage = homePageDev.clickOnSignIn();
         loginPage.doLogin();
         Thread.sleep(15000);
-        IDocumentationPage iDocumentationPage = homePageDev.clickOnInteractiveDocumentation();
-        iDocumentationPage.clickOnV1PublicCharacters();
-        iDocumentationPage.sendNameOfHero();
-        iDocumentationPage.clickOnTryButton();
-        Thread.sleep(15000);
-        Assertions.assertEquals("200", iDocumentationPage.getResponseCode());
-        iDocumentationPage.clickOnSignIn();
-        iDocumentationPage.clickOnLogOut();
+        Assertions.assertEquals("SERHEY", homePageDev.getUserName());
+        MyDeveloperPortalPage myDeveloperPortalPage = homePageDev.clickOnMyDevPortal();
+        Assertions.assertEquals("Serhey74312470", myDeveloperPortalPage.getUserInformation());
+        Assertions.assertEquals("07b0d846cafe9b5b9b8a341ee25876fa", myDeveloperPortalPage.getUserPublicKey());
     }
 }

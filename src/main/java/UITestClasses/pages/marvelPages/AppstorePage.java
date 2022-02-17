@@ -15,10 +15,6 @@ public class AppstorePage extends HomePage{
          return driver.findElement(TITLE).getText();
     }
 
-    public void closeAppStorePage(){
-        driver.close();
-    }
-
     public void switchToWindow(int numberWindow) {
         String handle = driver.getWindowHandles().toArray()[numberWindow]
                 .toString();

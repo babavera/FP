@@ -1,16 +1,16 @@
-package UITestClasses.pages.marvelPages;
+package UITestClasses.pages.devMarvelPages;
 
+import UITestClasses.pages.marvelPages.HomePage;
 import org.openqa.selenium.*;
 
-public class LoginPage extends HomePage{
+public class LoginPage extends HomePage {
 
     private final static By IFRAME = By.xpath("//iframe[@id='disneyid-iframe']");
     private final static By USERNAME_INPUT = By.xpath("//input[contains(@type,'email')]");
     private final static By PASSWORD_INPUT = By.xpath("//input[contains(@type,'password')]");
     private final static By SUBMIT_BUTTON = By.xpath("//button[@class='btn btn-primary btn-submit ng-isolate-scope']");
-
     private final static String emailAddress = "SerheyVeremeichik@gmail.com";
-    private final static String password = "BabaVera81";
+    private final static String password = "ZXCvbn123";
 
 
     public LoginPage(WebDriver driver) {
